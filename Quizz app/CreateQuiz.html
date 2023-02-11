@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quizz</title>
+    <link rel="stylesheet" href="CSs/CommonStyle.css">
+    <link rel="stylesheet" href="Css/CreteQuizStyle.css">
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/a34038e15b.js" crossorigin="anonymous"></script>
+    <!-- main script -->
+    <script defer src="Javascript/CreateQuizzPage.js"></script>
+</head>
+
+<body class="flex-center">
+    <div class="createQuiz-contianer flex-center">
+        <input type="text" placeholder="Add new Quiz" class="textBoxNearAddIcon" id="AddNewQuizBar">
+        <i class="fa-solid fa-plus add-icon newQuizAdd-icon" id="addnewQuiz-icon"></i>
+    </div>
+
+    <div class="newQuiz-container">
+
+        <div class="quiz-list-container flex-center">
+            <select>
+                <option>All quizzes are here!!</option>
+            </select>
+        </div>
+
+        <div class="new-question-container flex-center">
+            <span id="addQuestion_Span">
+                <div>Add new Question<i class="fa-solid fa-plus add-icon new-questionAdd-icon"></i></div>
+            </span>
+            <div class="questionForm-container hide">
+                <div class="question">
+                    Q: <input type="text" id="inputQuesTextBar">
+                </div>
+                <div class="inputAnswer-contianer">
+                    <ol id="inputAnswerOL">
+                        <li><input type="text"></li>
+                        <li><input type="text"></li>
+                        <li><input type="text"></li>
+                        <li><input type="text"></li>
+                    </ol>
+                    <div id="SelectedAnswer-div">
+                        Correct answer
+                        <input type="radio" name="correct" id="1">&nbsp;&nbsp;1
+                        <input type="radio"name="correct" id="2">&nbsp;&nbsp;2
+                        <input type="radio" name="correct" id="3">&nbsp;&nbsp;3
+                        <input type="radio" name="correct" id="4">&nbsp;&nbsp;4
+                    </div>
+                </div>
+                <div class="SaveAndCancelButton-div">
+                    <span><button id="cancelButton" class="commonButton">Cancel</button>
+                        <button id="saveButton" class="commonButton">Save</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="question-container">
+            <ol id="allQuestion">
+            
+            </ol>
+        </div>
+        <div class="button-container flex-center">
+            <span id="PlayAndSaveButton-container">
+                <button id="PlayButton" class="commonButton"><a href="quiz.html" onclick="return checkIfAllowedToPlay(event)">Play</a></button>
+                <button class="commonButton" id="deleteQuizz">Delete Quiz</button>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

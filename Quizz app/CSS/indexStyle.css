@@ -1,0 +1,280 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400;1,500;1,700&display=swap'); */
+
+a{
+    color:var(--dark-color);
+}
+
+body{
+    padding: 0px 1.4vw;
+    padding-top: 20px;
+    color: white;
+}
+
+/* header in internal css  */
+
+header{
+    height: 40%;
+    background-color: #1B2430;
+    border-radius: 8px;
+}
+
+.header-layer-1{
+    flex-direction: column;
+    font-size: 10vh;
+}
+
+.tagLine{
+    margin-top: 22px;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.tagLine::before, .tagLine::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tagLine::before{
+    background-color: var(--dark-color);
+    animation: typeWritter 3s steps(22) 1s infinite alternate;
+}
+
+.tagLine::after{
+    content: '|';
+    animation: typeWritter 3s steps(23)  1s infinite alternate, blinkLine 450ms 1s infinite forwards;
+}
+
+@keyframes typeWritter {
+    to{
+        left : 105%;
+    }
+}
+
+@keyframes blinkLine{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* end */
+
+/* play and crete button container styels  */
+
+.PlayAndCreateSection{
+    height: 40%;
+}
+
+.icon-container{
+    width: Max(55%, 300px);
+    padding: 0 1rem;
+}
+
+.icon-message{
+    font-size: clamp(.9rem, 1.9vw, 3rem);
+    white-space: nowrap;
+    position: absolute;
+    left: Max(25%, 50px);
+    bottom: -10%;
+    font-weight: bolder;
+    transition: box-shadow  0.8s ease;
+}
+
+.icon-message:hover{
+    box-shadow: 0 0 20px black;
+}
+
+
+.play-icon-div, .hammer-icon-div{
+    position: relative;
+    padding-left: 10px;
+    color: var(--light-violet);
+    min-width: 50%;
+    margin-bottom: 10px;
+}
+
+
+.hammer-icon{
+    transform: rotate(-15deg);
+    transform-origin: bottom;
+}
+
+.play-icon:hover{
+    transform: scale(1.2);
+}
+
+.hammer-icon:hover{
+    transform: rotate(10deg);
+}
+
+.hammer-icon-div{
+    margin-left: 50px;
+}
+
+.commonIconStyle{
+    transition: transform .8s ease ;
+    font-size: clamp(6rem, 8.5vw, 10rem);
+}
+
+
+/* about site section  */
+
+.aboutSiteSection{
+    text-align: center;
+    line-height: 2.3;
+    height: Max(400px, 40vw);
+    background-color: var(--light-purple);
+}
+
+.aboutSite-heading{
+    height: 20%;
+    font-size: 1.9rem;
+    line-height: 3;
+    font-weight: bolder;
+    background-color: black;
+}
+
+.aboutSite-layer-1{
+    background-color: #1B2430;
+    height: 82%;
+    padding-bottom: 30px;
+}
+
+.aboutSite-layer-2{
+    height: 90%;
+    width: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.aboutSite-layer-3{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    /* left: var(--divPosition, 0%); */
+    transform: translateX(var(--divPosition, 0%));
+    transition: transform 1s ease;
+}
+
+.aboutSite-layer-3  > div{
+    width: 50%;
+}
+
+.first{
+    background-image: url("../images/create3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.first-layer-1, .second-layer-1{
+    width: 40vw;
+    padding-left: 10px;
+}
+
+.divInslider-heading{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 8px;
+    text-align: left;
+    padding-left: 15px;
+    font-size: clamp(15px, 2vw, 2rem);
+}
+
+.divInslider-para{
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.second{
+    background-color: #a9c9ffe0;
+    position: relative;
+}
+
+
+.second-div-image{
+    width: 18vw;    
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+.controls{
+    width: 2rem;
+    margin: 0 3%;
+    font-size: Max(2rem, 6.8vw);
+}
+
+/* //footer styles  */
+footer{
+    background-color: #816797;
+    height: 20%;
+    margin-top: 8%;
+    padding-top: 20px;
+}
+
+.footer-heading{
+    font-weight: bold;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.contact-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* responsive desigh css  */
+@media  screen and (max-width:750px) {
+
+    .aboutSite-layer-2{
+        height: 80%;
+        width: 90%;
+    }
+
+    .aboutSite-layer-1{position: relative;}
+    .controls{
+        position: absolute;
+        bottom: 0;
+        margin: 2% 0;
+    }
+
+    .left-control{
+        left: 20%;
+    }
+
+    .right-control{
+        right: 20%;
+    }
+
+    .divInslider-para{
+        line-height: 1.8;
+        font-size: 14px;
+    }
+
+    .divInslider-heading{ width: 75%;}
+
+    .first-layer-1, .second-layer-1{
+        width: 100%;
+    }
+
+    footer{
+        height: 15%;
+    }
+
+    .second-div-image{width: 0;}
+
+    .footer-heading{font-size: 1.6rem;}
+}

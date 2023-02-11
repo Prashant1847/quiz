@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Quizz</title>
+    <link rel="stylesheet" href="CSS/CommonStyle.css">
+    <link rel="stylesheet" href="CSS/quizStyle.css">
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/a34038e15b.js" crossorigin="anonymous"></script>
+    <!-- main javascript file  -->
+    <script defer src="Javascript/quizzPage.js"></script>
+</head>
+
+<body class="flex-center">
+    <div class="quizz-container ">
+
+        <div class="Status-container">
+            <div class="progress-bar-div ">
+                <div class="progress-bar">
+                    <div class="progress">
+                        <div class="current-question">
+                            1/4
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timer-div">
+                0:00
+            </div>
+            <div class="CorrectIncorrect-div flex-center">
+                <div class="correct-icon-container"><i class="fa-solid fa-circle-check"></i> 0</div>
+                <div class="incorrect-icon-container"><i class="fa-solid fa-circle-xmark"></i> 0</div>
+            </div>
+        </div>
+
+        <div class="question-container flex-center">
+            <div class="question-number">1 :</div>
+            <div class="question">This is where the questio lies</div>
+        </div>
+
+        <div class="answer-container">
+            <ul>
+                <li><input type="checkbox">Answer one</li>
+                <li><input type="checkbox">Answer two</li>
+                <li><input type="checkbox">Answer three</li>
+                <li><input type="checkbox">Answer four</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <span>
+                <button id="quitButton"><a href="index.html">Quit</a></button>
+                <button id="clearbutton">Clear</button>
+                <button id="submitbutton">Submit</button>
+            </span>
+        </div>
+    </div>
+
+    <!-- this code will be shown when the timer goes out -->
+    <div class="reset-container flex-center">
+        <div class="reset">
+            Timed out! Better luck next time<br><br>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
+    <!-- end -->
+
+
+    <!-- this code will be shown when the quizz gets completed(it contianer total score div)  -->
+
+    <div class="totalScore-container flex-center">
+        <div class="messageAndScore-div flex-center">
+            <div class="scoreMessage flex-center">
+                Total score
+            </div>
+            <div class="score flex-center">
+                40/40
+            </div>
+            <div class="restartAndHomeButton-container">
+                <button class ="restartAndHomeButton" id="restart">Restart</button>
+                <button id="Home" class="restartAndHomeButton"><a href = "index.html">Home</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- end -->
+</body>
+
+</html>

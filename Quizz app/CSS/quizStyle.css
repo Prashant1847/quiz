@@ -1,0 +1,263 @@
+
+body{
+    background-image: linear-gradient(to top,#1B2430,#816797);
+}
+/* quizz contianer css  */
+ul{
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+a{
+    color: black;
+}
+
+li, button{
+    transition: all 0.6s ease;
+}
+
+button:hover, li:hover{
+    background-color: black;
+    color: white;
+}
+
+
+li{
+    margin: 4% 0px;
+    background-color: #00000059;
+    border-radius: 5px;
+    padding: 2%;
+    padding-left: 11%;
+    position: relative;
+}
+
+input[type = "checkbox"]{
+    position: absolute;
+    left: 4%;
+    top: 35%;
+    width: 15px;
+    height: 15px;
+}
+
+/* quizz container styles  */
+
+.quizz-container, .reset-container, .totalScore-container{  /*common container */
+    width: clamp(295px ,42%, 800px);
+    height: 70%;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+
+.quizz-container{ 
+    background-color: #ffffffc2;
+    box-shadow: 0 0 12px white;
+ }
+
+/* /status container style  */
+
+.Status-container{
+    margin-bottom: 2%;
+    font-size: 1.2rem;
+    height: 2rem;
+    display: flex;
+}
+
+.Status-container > div{
+    width: 35%;
+}
+.progress-bar, .progress{
+    border-radius: 15px;
+}
+
+.progress-bar{
+    margin-top: 4%;
+    width: 85%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.527);
+    position: relative;
+}
+
+.progress{
+    width: 40%; /* starting width should be zero so that zero progress can be shown */
+    height: 100%;
+    background-color: rgb(20, 177, 20);
+}
+
+.current-question{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    font-size: 1rem;
+}
+
+.timer-div{
+    text-align: center;
+}
+
+.incorrect-icon-container{
+    margin-left: 10px;
+}
+
+/* end  */
+
+#resetButton{
+    display: block;
+    margin: auto;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#resetButton, .reset-container{
+    background-color: red
+}
+
+.reset{
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.reset-container{
+    font-size: 1.5rem ;
+    display: none;
+    box-shadow: 0 0 20px red;
+    animation: fadeIn 3s ease 1 ;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0.1;
+    } to{
+        opacity: 1;
+    }
+}
+
+
+
+.question-container{
+
+    background-color: var(--dark-grey);
+    padding: 2%;
+    border-radius: 5px;
+    color: white;
+}
+
+.question-number{
+    width: Max(32px,9%);
+    padding-left: 10px;
+}
+
+.question{
+    width: 91%;
+}
+
+span{
+    display: block;
+    width: Max(200px, 52%);
+    margin: auto;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    width: 28%;
+    margin: 0px 2%;
+    box-shadow: 5px 5px#00000040;
+}
+
+
+
+/* // to manipulate elements wth js */
+.hide-div{
+    display: none;
+}
+
+.show-div{
+    display: flex;
+}
+
+.green-Bg{
+    background-color: rgb(47, 255, 75);
+}
+
+.red-Bg{
+    background-color: red;
+}
+
+/* div container score styles  */
+
+
+.totalScore-container{
+    background-color: #1cd5fa;
+    box-shadow: 0 0 10px white;
+    display: none;
+    animation: fadeIn 3s ease 1 ;
+}
+
+.messageAndScore-div{
+    width: 65%;
+    height: 65%;
+    flex-direction: column;
+}
+
+.score, .scoreMessage{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.scoreMessage{
+    font-size: 2rem;
+    padding: 5%;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.score{
+    font-size: 1.5rem;
+    padding: 3%;
+    width: 60%;
+}
+
+.restartAndHomeButton{
+    width: 4rem;
+}
+
+.restartAndHomeButton-container{
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* end  */
+
+@media  screen and (max-width:800px) {
+    
+    .question-container{margin-top: 20px;}
+    .answer-container{
+        margin-top: 10px;
+        margin-bottom: 22px;
+    }
+
+    .quizz-container, .reset-container, .totalScore-container{
+        height: max-content;
+        box-sizing: content-box;
+        padding: 20px 15px;
+    }
+
+    .reset-container, .totalScore-container{height: 55%;}
+
+    .messageAndScore-div{
+        width: 95%;
+    }
+
+    .reset{
+        /* background-color: teal; */
+        padding: 30px 4px;
+        text-align: center;
+    }
+
+}

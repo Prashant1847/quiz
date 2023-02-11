@@ -1,0 +1,281 @@
+
+html{
+}
+body{
+    background-color: var(--dark-color);
+    flex-direction: column;
+}
+
+
+ol{
+    border-radius: 5px;
+    padding: 4%;
+    height: 100%;
+    padding-left: 6%;
+}
+
+#allQuestion > li{
+    width: 80%;
+}
+
+a{
+    color: black;
+}
+
+li{
+    margin-bottom: 3%;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.459);
+    padding: 2%;
+    position: relative;
+    width: 100%;
+}
+
+li:hover{
+    background-color: rgba(255, 255, 255, 0.534);
+    color: black;
+}
+
+button{
+    width: 3.5rem;
+}
+
+
+li span{
+    position: absolute;
+    right: -27%;
+}
+
+::placeholder{
+    color: black;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/* // new quizz container box  */
+.createQuiz-contianer, .quiz-list-container{
+    background-color: aqua;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.createQuiz-contianer{
+    background-color: var(--light-violet);
+    width: Max(22%, 240px);
+    height: 3rem;
+}
+
+
+input[type = "text"], select{
+    border: none;
+    width: 65%;
+    height: 1.7rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+}
+
+select{
+    height: 80%;
+}
+
+
+#addQuestion_Span{
+    background-color: black;
+    text-align: center;
+    width: Max(50%, 200px);
+    height: 2rem;
+    color: white;
+    line-height: 2;
+    border-radius: 5px;
+}
+
+#addQuestionSpan div{
+    height: 100%;
+}
+
+.add-icon{
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 1.7 !important; 
+}
+
+.new-questionAdd-icon{
+    margin-left: 10px;
+}
+
+.newQuizAdd-icon{
+    width: 1.7rem;
+    border-radius: 0 5px 5px 0;
+}
+/* // new quizz style  */
+
+.newQuiz-container{
+    margin-top: 20px;
+    width: 47%;
+    height: 72%;
+    color: white;
+}
+
+
+.new-question-container , .quiz-list-container{
+    min-height: 12%;
+    border: solid  1px;
+    background-color: var(--light-violet);
+    padding: 10px;
+}
+
+.new-question-container{
+    flex-direction: column;
+}
+
+.quiz-list-container{
+    border-radius: 10px 10px 0 0;
+    height: 12%;
+}
+
+.question-container{
+    border-radius: 0 0 10px 10px;
+    padding-top: 1%;
+    min-height: 66%;
+    background-color: #ffffffb0;
+}
+
+
+
+.button-container{
+    margin-top: 2%;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 10px;
+    height: 11%;
+}
+
+
+#PlayButton, .commonButton{
+    width: 5.6rem;
+    font-size: .9rem;
+    border: none;
+    padding: 2px;
+    margin-left: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.548);
+}
+
+
+#PlayAndSaveButton-container{
+    display: block;
+    margin: auto;
+    min-width: 10rem;
+}
+
+/* //question formo css */
+
+.questionForm-container{
+    min-height: 300px;
+    width: Max(85%, 275px);
+    margin-top: 15px;
+    animation: fadeIn 1.5s ease 1;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+
+
+.question{
+    border-radius: 10px 10px 0 0;
+}
+
+.question, .SaveAndCancelButton-div{
+    text-align: center;
+    height: 2.8rem;
+    line-height: 2.3;
+    background-color: black;
+    padding: 4px;
+}
+
+.SaveAndCancelButton-div{
+    border-radius: 0 0 10px 10px;
+}
+
+.inputAnswer-contianer input[type="text"], #inputQuesTextBar{
+    width: 100%;
+    background: transparent;
+    border-bottom: solid 1px white;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#inputQuesTextBar{
+    width: 90%;
+    color: white;
+}
+
+.inputAnswer-contianer li{
+    position: relative;
+    border-bottom: none;
+}
+
+input[type = "radio"]{
+    margin-left: 5%;
+}
+
+.inputAnswer-contianer, #SelectedAnswer-div{background-color: var(--light-purple)}
+
+#SelectedAnswer-div{
+    height: 2.2rem;
+    width: 100%;
+    padding: 4%;
+    padding-top: 0;
+}
+
+
+#inputAnswerOL{
+    border-radius:0;
+}
+
+
+/* //class to add to template */
+.margin-property{
+    background-color: black;
+    color: white;
+    margin: auto;
+}
+
+
+@media  screen and (max-width:850px) {
+
+    .newQuiz-container{
+        width: 90vw;
+    }
+
+    input[type = "radio"]{
+        margin-left: 2.5%;
+    }
+
+    #SelectedAnswer-div{
+        font-size: .8rem;
+    }
+
+    .inputAnswer-contianer li{
+        width: 96%;
+        margin-left: 3%;
+        margin-bottom: 20px;
+    }
+
+    button{
+        width: 2.8rem;
+    }
+    
+}
